@@ -16,4 +16,7 @@ use App\Http\Controllers\MainController;
 |
 */
 
+// Home Route
 Route::get('/', [MainController::class, 'home']);
+// Saint Route
+Route::get('/saint/{id}', [MainController::class, 'show']);
