@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+// Importo il MainController
 use App\Http\Controllers\MainController;
 
 /*
