@@ -5,8 +5,12 @@
 <ul>
     @foreach ($saints as $saint)
         <li>
-            {{ $saint -> name }} {{ $saint -> place_of_birth }} - {{ $saint -> blessing_date }} - {{ $saint -> number_of_miracles }}
+            Saint: {{ $saint -> name }} <br>
+            Place of Birth: {{ $saint -> place_of_birth }} <br>
+            Blessing Date: {{ $saint -> blessing_date }} <br>
+            Number of Miracles: {{ $saint -> number_of_miracles }}
         </li>
+        <br>
     @endforeach
 </ul>
 @endsection
