@@ -6,7 +6,7 @@
     <ul>
         @foreach ($saints as $saint)
             <li>
-                <a href="/saint/{{ $saint -> id }}">
+                <a href="{{ route('saint.show', ['id' => $saint -> id]) }}">
                     Saint: {{ $saint -> name }} <br>
                     Number of Miracles: {{ $saint -> number_of_miracles }}
                 </a>
