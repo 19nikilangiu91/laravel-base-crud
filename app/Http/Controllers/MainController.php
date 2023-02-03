@@ -14,17 +14,17 @@ class MainController extends Controller
     public function home()
     {
 
-        $saint = Saint::all();
+        $saints = Saint::all();
 
-        $data = [
-            'saints' => $saint
-        ];
+        // $data = [
+        //     'saints' => $saint
+        // ];
 
-        return view('pages.home', $data);
+        return view('pages.home', compact('saints'));
     }
 
     // Bonus 2 
-    public function show($id)
+    public function saintShow($id)
     {
 
         $saint = Saint::find($id);
@@ -33,6 +33,6 @@ class MainController extends Controller
             'saint' => $saint
         ];
 
-        return view('pages.saint', $data);
+        return view('pages.saintShow', $data);
     }
 }
