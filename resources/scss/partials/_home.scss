@@ -1,10 +1,20 @@
 div {
 
+    .create {
+        text-decoration: none;
+
+        .text {
+            color: red;
+        }
+
+    }
+
     display: flex;
     flex-direction: column;
 
     h1 {
         margin-left: 30px;
+        color: black;
     }
 
     ul {
