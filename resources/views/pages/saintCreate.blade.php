@@ -3,20 +3,21 @@
 @section('content')
 <div>
     <h1 class="text">Create your Saint</h1>
-    <form>
+    <form method="POST" action="{{route('saint.store')}}">
+        @csrf
         <label for="name">Name</label>
-        <input type="text" name="name">
+        <input class="name" type="text" name="name">
         <br>
         <label for="placeOfBirth">Place of Birth</label>
-        <input type="text" name="place_of_birth">
+        <input class="place" type="text" name="place_of_birth">
         <br>
         <label for="blessingDate">Blessing date</label>
-        <input type="date" name="blessing_date">
+        <input class="blessing" type="date" name="blessing_date">
         <br>
         <label for="numberOfMiracle">Number Of Miracle</label>
-        <input type="number" name="number_of_miracles">
+        <input class="miracles" type="number" name="number_of_miracles">
         <br>
-        <input type="submit" value="Create you Saint">
+        <input class="button" type="submit" value="Create you Saint">
     </form>
 </div>
 @endsection 
