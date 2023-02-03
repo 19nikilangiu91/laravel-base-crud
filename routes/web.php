@@ -16,7 +16,9 @@ use App\Http\Controllers\MainController;
 |
 */
 
-// Home Route
-Route::get('/', [MainController::class, 'home']);
-// Saint Route
-Route::get('/saint/{id}', [MainController::class, 'show']);
+// Index
+Route::get('/', [MainController::class, 'home'])
+    ->name('home');
+// Show
+Route::get('/saint/show/{id}', [MainController::class, 'saintShow'])
+    ->name('saint.show');
