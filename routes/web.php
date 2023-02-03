@@ -25,3 +25,5 @@ Route::get('/saint/show/{id}', [MainController::class, 'saintShow'])
 // Delete 
 Route::get('/saint/destroy/{id}', [MainController::class, 'saintDestroy'])
     ->name('saint.destroy');
+// Create
+Route::get('/saint/create/', [MainController::class, 'saintCreate']);

@@ -2,6 +2,9 @@
 
 @section('content')
 <div>
+    <a class="create" href="/saint/create/">
+        <h1 class="text">Click me and try to create your Saint</h1>
+    </a>
     <h1>Saints</h1>
     <ul>
         @foreach ($saints as $saint)
