@@ -10,7 +10,7 @@ use App\Models\Saint;
 class MainController extends Controller
 {
 
-    // Bonus 1
+    // Bonus 1 - Index
     public function home()
     {
 
@@ -23,7 +23,7 @@ class MainController extends Controller
         return view('pages.home', compact('saints'));
     }
 
-    // Bonus 2 
+    // Bonus 2 - Show
     public function saintShow($id)
     {
 
@@ -34,5 +34,15 @@ class MainController extends Controller
         ];
 
         return view('pages.saintShow', $data);
+    }
+
+    // Delete
+    public function saintDestroy($id)
+    {
+
+        $saint = Saint::find($id);
+        $saint->delete();
+
+        return redirect()->route('home');
     }
 }

@@ -22,3 +22,6 @@ Route::get('/', [MainController::class, 'home'])
 // Show
 Route::get('/saint/show/{id}', [MainController::class, 'saintShow'])
     ->name('saint.show');
+// Delete 
+Route::get('/saint/destroy/{id}', [MainController::class, 'saintDestroy'])
+    ->name('saint.destroy');

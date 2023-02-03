@@ -10,6 +10,7 @@
                     Saint: {{ $saint -> name }} <br>
                     Number of Miracles: {{ $saint -> number_of_miracles }}
                 </a>
+                <a  class ="delete" href="{{ route('saint.destroy', ['id' => $saint -> id]) }}">X</a>
             </li>
             <br>
         @endforeach
